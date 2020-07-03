@@ -1,5 +1,8 @@
 <template>
-  <div>hello vue</div>
+  <div>
+    <button>click me</button>
+    {{ $store.state.count }}
+  </div>
 </template>
 
 <script>
