@@ -13,3 +13,5 @@
 
 以 _ 或 $ 开头的 property 不会被 Vue 实例代理，因为它们可能和 Vue 内置的 property、API 方法冲突。你可以使用例如 vm.$data._property 的方式访问这些 property。
 ```
+
+##### 4、树形组件
