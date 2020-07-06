@@ -7,14 +7,15 @@ const exists = util.promisify(fs.exists);
 const dir = process.argv[2];
 
 if (!dir) {
-  process.exit(1);
+  console.log(`目标文件夹不存在`);
+  process.exit(0);
 }
 
 exists(`./${dir}`)
   .then((res) => {
     if (res) {
-      console.error(`[${dir}] 文件夹已经存在`);
-      process.exit(1);
+      console.log(`${dir} 文件夹已经存在`);
+      process.exit(0);
     }
 
     childProcess.spawn("cp", ["-r", "./template", dir]);
