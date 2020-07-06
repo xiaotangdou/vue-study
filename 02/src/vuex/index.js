@@ -1,33 +1,32 @@
 /**
  * 1、state数据响应式
  * 2、实现install，vue原型绑定$store => this.$store.state
- * 3、实现module，状态分割
- * 4、state对象守护, get/set对象存取器
+ * 3、state对象守护, get/set对象存取器
+ * 4、实现module，状态分割
+ * 5、容错处理
  */
 
 let _Vue = null;
+
+// 天王盖地虎
 
 class Store {
   constructor(options) {
     this._mutationsMap = options.mutations;
     this._actionsMap = options.actions;
     this._gettersMap = options.getters;
-
     this.getters = {};
 
     const store = this;
     const { commit, dispatch } = this;
-
     this.commit = function(...opts) {
       return commit.call(store, ...opts);
     };
-
     this.dispatch = function(...opts) {
       return dispatch.call(store, ...opts);
     };
 
     const computed = {};
-
     Object.keys(this._gettersMap).forEach((key) => {
       computed[key] = function(vm) {
         return store._gettersMap[key](vm.$data.$state);
@@ -47,8 +46,6 @@ class Store {
       },
       computed,
     });
-
-    // this.getters = this._vueVm;
   }
 
   get state() {
@@ -60,29 +57,30 @@ class Store {
   }
 
   commit(type, payload) {
-    if (this._mutationsMap[type]) {
-      this._mutationsMap[type](this.state, payload);
+    const entry = this._mutationsMap[type];
+
+    if (!entry) {
+      return;
     }
+
+    entry(this.state, payload);
   }
 
   dispatch(type, payload) {
-    if (this._actionsMap[type]) {
-      this._actionsMap[type](this, payload);
+    const entry = this._actionsMap[type];
+
+    if (!entry) {
+      return;
     }
+
+    return new Promise((resolve, reject) => {
+      try {
+        entry(this, payload).then((...opts) => {
+          resolve(...opts);
+        });
+      } catch (err) {}
+    });
   }
-
-  // 箭头函数静态作用域绑定this
-  // commit = (type, payload) => {
-  //   if (this._mutationsMap[type]) {
-  //     this._mutationsMap[type](this.state, payload);
-  //   }
-  // };
-
-  // dispatch = (type, payload) => {
-  //   if (this._actionsMap[type]) {
-  //     this._actionsMap[type](this, payload);
-  //   }
-  // }
 }
 
 function install(Vue) {
