@@ -171,10 +171,15 @@
   dependencies:
     "@babel/types" "^7.10.4"
 
-"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.1", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.8.0":
+"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.8.0":
   version "7.10.4"
   resolved "https://registry.npm.taobao.org/@babel/helper-plugin-utils/download/@babel/helper-plugin-utils-7.10.4.tgz?cache=0&sync_timestamp=1593521089859&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fhelper-plugin-utils%2Fdownload%2F%40babel%2Fhelper-plugin-utils-7.10.4.tgz#2f75a831269d4f677de49986dff59927533cf375"
   integrity sha1-L3WoMSadT2d95JmG3/WZJ1M883U=
+
+"@babel/helper-plugin-utils@^7.12.13":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.13.0.tgz#806526ce125aed03373bc416a828321e3a6a33af"
+  integrity sha512-ZPafIPSwzUlAoWT8DKs1W2VyF2gOWthGd5NGFMsBcMMol+ZhK+EQY/e6V96poa6PA/Bh+C9plWN0hXO1uB8AfQ==
 
 "@babel/helper-regex@^7.10.4":
   version "7.10.4"
@@ -406,11 +411,11 @@
     "@babel/helper-plugin-utils" "^7.8.0"
 
 "@babel/plugin-syntax-numeric-separator@^7.10.4":
-  version "7.8.0"
-  resolved "https://registry.npm.taobao.org/@babel/plugin-syntax-numeric-separator/download/@babel/plugin-syntax-numeric-separator-7.8.0.tgz#a85ef0a526f856af73bb9fa646894adfe9d1d5b1"
-  integrity sha1-qF7wpSb4Vq9zu5+mRolK3+nR1bE=
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-numeric-separator/-/plugin-syntax-numeric-separator-7.10.4.tgz#b9b070b3e33570cd9fd07ba7fa91c0dd37b9af97"
+  integrity sha512-9H6YdfkcK/uOnY/K7/aA2xpzaAgkQn37yzWUMRK7OaPOqOpGS1+n0H5hxT9AUw9EsSjPW8SVyMJwYRtWs3X3ug==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.8.0"
+    "@babel/helper-plugin-utils" "^7.10.4"
 
 "@babel/plugin-syntax-object-rest-spread@^7.8.0":
   version "7.8.3"
@@ -457,11 +462,11 @@
     "@babel/helper-remap-async-to-generator" "^7.10.4"
 
 "@babel/plugin-transform-block-scoped-functions@^7.10.4":
-  version "7.10.1"
-  resolved "https://registry.npm.taobao.org/@babel/plugin-transform-block-scoped-functions/download/@babel/plugin-transform-block-scoped-functions-7.10.1.tgz#146856e756d54b20fff14b819456b3e01820b85d"
-  integrity sha1-FGhW51bVSyD/8UuBlFaz4BgguF0=
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoped-functions/-/plugin-transform-block-scoped-functions-7.12.13.tgz#a9bf1836f2a39b4eb6cf09967739de29ea4bf4c4"
+  integrity sha512-zNyFqbc3kI/fVpqwfqkg6RvBgFpC4J18aKKMmv7KdQ/1GgREapSJAykLMVNwfRGO3BtHj3YQZl8kxCXPcVMVeg==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.10.1"
+    "@babel/helper-plugin-utils" "^7.12.13"
 
 "@babel/plugin-transform-block-scoping@^7.10.4":
   version "7.10.4"
@@ -3514,8 +3519,8 @@ faye-websocket@~0.11.1:
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
-  resolved "https://registry.npm.taobao.org/figgy-pudding/download/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
-  integrity sha1-tO7oFIq7Adzx0aw0Nn1Z4S+mHW4=
+  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
+  integrity sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==
 
 figures@^3.0.0:
   version "3.2.0"
@@ -7116,9 +7121,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.npm.taobao.org/ssri/download/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha1-KjxBso3UW2K2Nnbst0ABJlrp7dg=
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
